@@ -1,5 +1,4 @@
-import { useAddContactMutation, useGetContactsQuery } from 'redux/contactsSlice';
-
+import { useAddContactMutation } from 'redux/contactsSlice';
 import {
   NameForm,
   FormLabel,
@@ -7,6 +6,7 @@ import {
   SubmitBtn,
 } from './ContactForm.styled';
 import React, { useState } from 'react';
+import { useGetContactsQuery } from 'redux/contactsSlice';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');

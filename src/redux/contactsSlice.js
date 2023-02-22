@@ -29,6 +29,3 @@ export const contactsApi = createApi({
 });
 
 export const { useGetContactsQuery, useAddContactMutation, useDeleteContactMutation } = contactsApi;
-
-
-// https://63f63d56ab76703b15bb54ee.mockapi.io

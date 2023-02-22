@@ -1,7 +1,10 @@
 import { nanoid } from 'nanoid';
 import { ListBtn, ListItem, ListWrapper } from './ContactList.styled';
 import { useSelector } from 'react-redux';
-import { useDeleteContactMutation, useGetContactsQuery } from 'redux/contactsSlice';
+import {
+  useGetContactsQuery,
+  useDeleteContactMutation,
+} from 'redux/contactsSlice';
 import { selectFilter } from 'redux/selectors';
 
 export const ContactList = () => {
@@ -24,14 +27,13 @@ export const ContactList = () => {
     return contact.name.toLocaleLowerCase().includes(normalizeFilter);
   });
 
-  
   return (
     <ListWrapper>
       {filterContacts.map(contact => {
         return (
           <ListItem key={nanoid()}>
             <p>
-              {contact.name}: {contact.number}
+              {contact.name}: {contact.phone}
             </p>
             <ListBtn
               type="button"
