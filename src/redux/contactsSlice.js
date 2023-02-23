@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const contactsApi = createApi({
   reducerPath: 'contacts',
   baseQuery: fetchBaseQuery({
-    baseUrl: '//63f794d4e8a73b486afb5808.mockapi.io',
+    baseUrl: 'https://63f794d4e8a73b486afb5808.mockapi.io',
   }),
   endpoints: builder => ({
     getContacts: builder.query({
